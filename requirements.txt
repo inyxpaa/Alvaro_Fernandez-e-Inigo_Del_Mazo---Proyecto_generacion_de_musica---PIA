@@ -1,0 +1,7 @@
+transformers
+torch
+torchaudio
+datasets
+scipy
+gradio
+peft
