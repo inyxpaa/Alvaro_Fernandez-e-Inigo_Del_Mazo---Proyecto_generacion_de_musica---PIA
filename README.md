@@ -20,8 +20,8 @@ Creamos un dataset propio recopilando 25 clips de música Soul instrumental (sin
 Para probar nuestra aplicación, sigue estos pasos en tu terminal de comandos:
 
 ```bash
-git clone [https://github.com/tu-usuario/Alvaro-Fernandez-e-I-igo-Del-Mazo---Proyecto-generaci-n-de-m-sica---PIA.git](https://github.com/tu-usuario/Alvaro-Fernandez-e-I-igo-Del-Mazo---Proyecto-generaci-n-de-m-sica---PIA.git)
-cd Alvaro-Fernandez-e-I-igo-Del-Mazo---Proyecto-generaci-n-de-m-sica---PIA
+git clone [https://github.com/tu-usuario/Alvaro_Fernandez-e-Inigo_Del_Mazo---Proyecto_generacion_de_musica---PIA.git](https://github.com/tu-usuario/Alvaro_Fernandez-e-Inigo_Del_Mazo---Proyecto_generacion_de_musica---PIA.git)
+cd Alvaro_Fernandez-e-Inigo_Del_Mazo---Proyecto_generacion_de_musica---PIA
 python -m venv env
 .\env\Scripts\activate
 pip install -r requirements.txt
