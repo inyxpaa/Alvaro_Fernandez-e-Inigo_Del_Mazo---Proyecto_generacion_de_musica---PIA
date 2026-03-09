@@ -17,7 +17,6 @@ Creamos un dataset propio. Recopilamos 25 clips de música Soul instrumental sin
 
 ## Requisitos Previos
 * Python 3.10 o superior.
-* Git instalado en el equipo.
 
 ## Instrucciones de Instalación y Ejecución
 Sigue estos pasos exactos en tu terminal:
