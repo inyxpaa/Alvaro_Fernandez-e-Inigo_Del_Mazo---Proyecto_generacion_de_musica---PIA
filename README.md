@@ -4,25 +4,25 @@
 **Integrantes:** Álvaro Fernández e Iñigo Del Mazo
 
 ## Descripción
-Esta aplicación web genera pistas de música instrumental del género Soul basándose en descripciones textuales. El usuario puede seleccionar un estilo predefinido y añadir instrumentos extra a su gusto. El sistema utiliza un modelo de Inteligencia Artificial de código abierto ejecutado 100% en local.
+Esta aplicación web genera pistas de música instrumental Soul. El usuario escribe o elige un estilo. También puede añadir instrumentos extra. El sistema usa un modelo de Inteligencia Artificial. Todo funciona 100% en local.
 
 ## Modelo Base
-Hemos elegido el modelo `facebook/musicgen-small`. Es un modelo Transformer autorregresivo con 300 millones de parámetros. Lo seleccionamos porque es una versión reducida y potente que permite generar muestras de audio de alta calidad sin requerir recursos computacionales inasumibles para una ejecución local.
+Usamos el modelo `facebook/musicgen-small`. Es un modelo Transformer autorregresivo. Tiene 300 millones de parámetros. Es un modelo ligero. Genera audio de alta calidad sin colapsar ordenadores normales.
 
 ## Técnica de Adaptación
-Hemos optado por la Opción A (Fine-Tuning Tradicional). Para hacerlo de forma eficiente y evitar el colapso del modelo, utilizamos la técnica LoRA mediante la librería PEFT. Esta técnica nos permitió entrenar una pequeña capa externa adaptada a nuestro estilo Soul sin destruir los pesos originales del modelo base. El entrenamiento se realizó en Google Colab para solventar limitaciones de hardware, y la ejecución final (inferencia) se realiza en local a través de una interfaz web.
+Elegimos la Opción A (Fine-Tuning Tradicional). Usamos la técnica LoRA con la librería PEFT. Esta técnica entrena una capa externa pequeña. Protege los pesos originales del modelo base. Entrenamos el modelo en Google Colab para evitar problemas de memoria. La ejecución final se hace en local con una web.
 
 ## Dataset
-Creamos un dataset propio recopilando 25 clips de música Soul instrumental (sin voz) cortados a aproximadamente 30 segundos cada uno. Para el etiquetado, generamos un archivo `metadata.jsonl` que relaciona cada audio `.wav` con una descripción textual detallada de los instrumentos y el ritmo (por ejemplo: "Soul romántico, ritmo suave, bajo profundo y cuerdas").
+Creamos un dataset propio. Recopilamos 25 clips de música Soul instrumental sin voz. Cada clip dura unos 30 segundos. Creamos el archivo `metadata.jsonl`. Este archivo enlaza cada audio con un texto exacto. Ejemplo: "Soul romántico, ritmo suave, bajo profundo y cuerdas".
+
+## Requisitos Previos
+* Python 3.10 o superior.
+* Git instalado en el equipo.
 
 ## Instrucciones de Instalación y Ejecución
+Sigue estos pasos exactos en tu terminal:
 
-Para probar nuestra aplicación, sigue estos pasos en tu terminal de comandos:
-
+1. **Clonar el repositorio:**
 ```bash
 git clone [https://github.com/tu-usuario/Alvaro_Fernandez-e-Inigo_Del_Mazo---Proyecto_generacion_de_musica---PIA.git](https://github.com/tu-usuario/Alvaro_Fernandez-e-Inigo_Del_Mazo---Proyecto_generacion_de_musica---PIA.git)
 cd Alvaro_Fernandez-e-Inigo_Del_Mazo---Proyecto_generacion_de_musica---PIA
-python -m venv env
-.\env\Scripts\activate
-pip install -r requirements.txt
-python src/app.py
